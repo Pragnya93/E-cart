@@ -1,0 +1,41 @@
+ion-header{
+    .toolbar{
+        --background: #388E3C;
+        ion-buttons {
+            position: relative;
+            margin-right: 41px;
+            ion-icon{
+                font-size: 29px;
+                margin-right: 15px;
+                color: white;
+
+            }
+          p{
+            position: absolute;
+            top: -23px;
+            left: 21px;
+            color: #f2f2f2;
+            border: 1px solid black;
+            border-radius: 100px;
+            width: 30px;
+            height: 28px;
+            text-align: center;
+            background-color: red;
+            font-size: 13px;
+            padding: 5px 2px;
+
+          }
+           
+        }
+        img{
+            margin-left: 20px;
+        }
+    }
+}
+
+ion-footer{
+    ion-toolbar{
+        background-color: #388E3C;
+    }
+    
+}

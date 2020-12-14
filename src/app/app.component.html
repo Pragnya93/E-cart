@@ -1,0 +1,23 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar class="toolbar">
+      <ion-buttons slot="end" (click)="exploreCart()">
+        <ion-icon name="cart"></ion-icon>
+        <p>{{getCount()}}</p>
+      </ion-buttons>
+      <ion-title>
+        <img alt="logo" height="40" src="../assets/icon/logo.png">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <ion-router-outlet ></ion-router-outlet> -->
+  <ion-router-outlet (newItemEvent)="totalItem = $event"></ion-router-outlet>
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <ion-title>Footer - No Border</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-app>

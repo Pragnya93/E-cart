@@ -1,0 +1,48 @@
+.header{
+    position: relative;
+    .quantity{
+        display: flex;
+        position: absolute;
+        right: 20px;
+    
+        ion-input{
+            width: 20px;
+            border: 1px solid #d6c7c7;
+            height: 28px;
+            width: 40px;
+            margin-top: -5px;
+        }
+    }
+}
+
+
+
+.card-footer{
+    border-top: 1px solid black !important;
+    margin-top: 10px;
+
+    ion-col:first-child{
+        border-right: 1px solid black !important;
+    }
+}
+
+.norecords{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    p{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+ion-toolbar{
+    --background: #5c962c !important;
+    text-align: center;
+    color: white;
+}
+
+
+  
+  

@@ -1,0 +1,30 @@
+<!-- <ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="end">
+      <ion-icon name="cart"></ion-icon>
+      <p>1</p>
+    </ion-buttons>
+    <ion-title>
+      <img alt="logo" height="40" src="../assets/icon/logo.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content>
+  <ion-card *ngFor="let item of itemList;let i=index">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src={{item.image}}>
+      </ion-avatar>
+      <ion-label>
+        <h3>{{item.name}}</h3>
+        <p>Rs.{{item.price}}</p>
+      </ion-label>
+      <button (click)="addToCart(item,i)" >
+        <ion-icon name="cart"></ion-icon>
+        Add to Cart
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-content class="custom-popover">
+  <ng-container *ngIf="bucketList.length>0">
+    <ion-card *ngFor="let item of bucketList;let i=index">
+      <ion-item lines="none" class="header">
+        <ion-avatar slot="start">
+          <img src={{item.image}}>
+        </ion-avatar>
+        <ion-label>
+          <h3>{{item.name}}</h3>
+          <p>Price: Rs {{item.price}}</p>
+        </ion-label>
+        <div class="quantity">
+          <!-- <ion-button>
+            +
+          </ion-button> -->
+          <label>Quanity: </label>
+          <ion-input type="number" [(ngModel)]="quantity">{{item.quantity}}</ion-input>
+          <!-- <ion-button>
+            -
+          </ion-button> -->
+        </div>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label class="ion-text-wrap">
+          {{item.description}}
+        </ion-label>
+      </ion-item>
+
+      <ion-row class="card-footer">
+        <ion-col col-6 class="ion-text-center">
+          <ion-button fill="clear" color="dark" class="ion-text-capitalize">
+            Sub-Total:Rs {{getSubTotal(item.quantity,item.price)}}
+          </ion-button>
+        </ion-col>
+        <ion-col col-6 class="ion-text-center">
+          <ion-button fill="clear" color="dark" class="ion-text-capitalize" (click)="removeItem(i,item)">
+            Remove
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ng-container>
+
+  <ng-container *ngIf="bucketList.length==0">
+    <ion-item lines="none" text-center class="norecords">
+      <p>No records found.</p>
+    </ion-item>
+  </ng-container>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Total: {{total}} </ion-title>
+  </ion-toolbar>
+</ion-footer>
